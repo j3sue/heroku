@@ -1,1 +1,1 @@
-web: python timeFromUTC.py 
+web: python timeFromUTC.py $PORT
