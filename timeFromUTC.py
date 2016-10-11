@@ -1,13 +1,10 @@
 from flask import Flask
 import sys
 app = Flask(__name__)
-from app import views
 from datetime import datetime
 
 @app.route('/')
-@app.route('/time')
-
-def time():
+def timeFromUTC():
     utcTime = datetime.utcnow()
     return (str((utcTime-datetime(1970,1,1)).total_seconds()) + " seconds have passed since January 1, 1970!")
 
